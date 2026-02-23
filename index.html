@@ -6,41 +6,139 @@
   <title>Dindigul Thalappakattu Restaurant</title>
 
   <style>
-    *{
-      background-color: #111;
-      color: yellow;
+    
 
-    }
+body{
+  background-color:#111;
+  font-family:Arial, sans-serif;
+  margin:0;
+}
 
-    @media screen and (min-width: 480px) and (max-width: 768px){ 
+/* HEADER */
+.main-header{
+  text-align:center;
+  padding:20px;
+}
 
-      body{
-        background-color: #333;
-      }
-      
-    }
+/* Moving Title Animation instead of MARQUEE */
+.title{
+  color:aliceblue;
+  white-space:nowrap;
+  overflow:hidden;
+  display:inline-block;
+  animation:scrollText 10s linear infinite;
+}
+
+@keyframes scrollText{
+  0%{transform:translateX(-100%);}
+  100%{transform:translateX(100%);}
+}
+
+/* NAVBAR */
+.navbar a{
+  text-decoration:none;
+  color:yellow;
+  margin:10px;
+  font-size:18px;
+}
+
+.navbar a:hover{
+  color:white;
+}
+
+
+.founder-img{
+  display:block;
+  margin:25px auto;
+  width:400px;
+  max-width:90%;
+  border-radius:10px;
+}
+
+
+.gallery-marquee{
+  width:50%;
+  margin:20px auto;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.gallery-marquee h2{
+  display:inline-block;
+  color:aliceblue;
+  animation:scrollText 5s linear infinite;
+}
+
+@keyframes scrollText{
+  from{
+    transform:translateX(-100%);
+  }
+  to{
+    transform:translateX(100%);
+  }
+}
+
+/* Form Inputs */
+input, textarea, button{
+  color:black;
+  background-color:white;
+}
+
+/* Table */
+table{
+  background-color:#222;
+  color:white;
+}
+
+/* Media Query for Tablet */
+@media screen and (min-width:480px) and (max-width:768px){
+
+  body{
+    background-color:#333;
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+
+  iframe{
+    width:100%;
+    height:auto;
+  }
+
+  table{
+    width:100%;
+  }
+
+}
     
   </style>
 
 </head>
-<body style="background-color: #111; font-family: Arial, sans-serif; color: #333;">
-  <center>
-  <header>
-    <marquee behavior="scroll" scrollamount="20" width="50%" direction="right" height="100px"><h1 style="color: aliceblue;">&#128516 Dindigul Thalappakatti Biriyani Restaurant &#128516</h1></marquee>
-    <nav>
-      <a href="#home" style="text-decoration: none;">Home |</a>
-      <a href="#about" style="text-decoration: none;">About Us |</a>
-      <a href="#gallery" style="text-decoration: none;">Gallery |</a>
-      <a href="#menu" style="text-decoration: none;">List of Foods |</a>
-      <a href="#contact" style="text-decoration: none;">Connect</a>
-    </nav>
-  </header>
-</center>
+<body>
+
+
+<header class="main-header">
+
+  <h1 class="title">
+    😄 Dindigul Thalappakatti Biriyani Restaurant 😄
+  </h1>
+
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#menu">List of Foods</a>
+    <a href="#contact">Connect</a>
+  </nav>
+
+</header>
 
   <section id="about">
-    <center>
-    <img src="https://tse2.mm.bing.net/th/id/OIP.-CYkRTy2YtCTvC62q1Tx8QAAAA?pid=Api&P=0&h=180" alt="Founder Image" style="width:400px; border-radius:10px; display:block; margin-bottom:25px;" />
-    </center>
+
+    <img src="https://tse2.mm.bing.net/th/id/OIP.-CYkRTy2YtCTvC62q1Tx8QAAAA?pid=Api&P=0&h=180" alt="Founder Image" class="founder-img" />
+
     <fieldset>
       <legend><h2 style="color: aliceblue;">ABOUT US:</h2></legend>
       <img src="https://thalappakatti.com/wp-content/uploads/2016/12/photo1.png" alt="Family Image" width="550" height="500"/>
@@ -83,7 +181,9 @@
   </section>
 
   <section id="gallery">
-    <center><marquee behavior="scroll" scrollamount="10" width="50%" direction="right" height="100px"><h2 style="color: aliceblue;">&#127968 <b >Gallery</b> &#127968</h2></center></marquee>
+    <div class="gallery-marquee">
+      <h2>🏠 <b>Gallery</b> 🏠</h2>
+    </div>
     <p style="color: aliceblue;">Thalappakatti Biryani is not just food; it's a legacy of flavor, aroma, and tradition that originated in Dindigul, Tamil Nadu. The name <mark>"Thalappakatti," meaning "turban" in Tamil,</mark> symbolizes authenticity and heritage. This iconic biryani is celebrated for its rich, spicy taste, made with small-grained seeraga samba rice, succulent mutton or chicken, and a secret blend of hand-ground spices.The Thalappakatti Biryani Gallery is a visual journey into this culinary masterpiece. <strong>Every photograph captures the vibrant saffron hues of the rice, the glistening meat pieces soaked in masala, and the traditional banana leaf presentation</strong>.
 From steaming pots to carefully plated dishes, the gallery showcases the entire process—from preparation to plating.You’ll see images of rustic clay pots, large dum vessels, and close-ups of aromatic ingredients like star anise, cinnamon, and cloves. Each shot celebrates the soul of South Indian biryani making. There's also a glimpse of the cozy, heritage-style interiors of Thalappakatti restaurants, adding warmth to the experience. Whether you're a food lover or a photography enthusiast, the Thalappakatti Biryani Gallery invites youto taste tradition through visuals bold, beautiful, and unforgettable.</p>
     <center><div>
@@ -113,9 +213,9 @@ From steaming pots to carefully plated dishes, the gallery showcases the entire 
     <pre style="color: antiquewhite;">Dindigul | Chennai | Madurai | Coimbatore | Kanchipuram | Erode | Tiruppur | Tiruchy | Tirunelveli | Villupuram | Virudhunagar | Pondicherry | Bangalore | Kerala | SriLanka | Dubai | Malaysia | Singapore | France | USA</pre>
   </section>
 
-  <session id="food">
+  <section id="food">
     <center><h1 style="color: bisque;">List of Foods Available</h1></center>
-  </session>
+  </section>
 
   <section id="menu">
     <fieldset>
@@ -149,7 +249,7 @@ From steaming pots to carefully plated dishes, the gallery showcases the entire 
 
   <section id="contact">
   <h2 style="text-align: center;"><b style="color: azure;">Connect With Us</b></h2>
-    <form>
+    <form id="orderForm">
       <fieldset>
         <legend><b style="color: azure;">Customer Details:</b></legend>
         <div>
@@ -171,8 +271,8 @@ From steaming pots to carefully plated dishes, the gallery showcases the entire 
       <label style="color: antiquewhite;">Address:</label>
       <textarea placeholder="Enter Your Address"></textarea>
       <br/>
-      <button type="button" value="click">Conform Order</button>
-      <button type="submit" value="Submit"><b>Submit</b></button>
+      <button type="button" id="confirmBtn">Confirm Order</button>
+<button type="submit" id="submitBtn"><b>Submit</b></button>
       </div>
       </fieldset>
     </form>
@@ -191,5 +291,82 @@ From steaming pots to carefully plated dishes, the gallery showcases the entire 
  <footer style="text-align: center;">
   <marquee behavior="scroll" scrollamount="10" width="50%" direction="right" height="80"><strong style="color: azure;">Thank You! Visit again!</strong></marquee>
   </footer>
+
+  <script>
+
+const confirmBtn = document.getElementById("confirmBtn");
+const submitBtn = document.getElementById("submitBtn");
+
+confirmBtn.addEventListener("click", () => {
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("pnumber").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const food = document.getElementById("fitem").value.trim();
+  const quantity = parseInt(document.getElementById("qnumber").value);
+
+  if(name === "" || phone === "" || email === "" || food === "" || quantity === ""){
+    alert("⚠ Please fill all the fields!");
+    return;
+  }
+
+  if(!/^[0-9]{10}$/.test(phone)){{
+    alert("📱 Enter valid 10-digit phone number!");
+    return;
+  }
+
+  if(quantity <= 0){
+    alert("🍽 Quantity must be greater than 0!");
+    return;
+  }
+
+  const summary = `
+  Name: ${name}
+  Phone: ${phone}
+  Email: ${email}
+  Food Item: ${food}
+  Quantity: ${quantity}
+  `;
+
+  alert("✅ Order Confirmed!\n\n" + summary);
+
+}
+});
+
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  alert("🎉 Your Order has been Submitted Successfully!");
+
+  document.getElementById("name").value = "";
+  document.getElementById("pnumber").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("fitem").value = "";
+  document.getElementById("qnumber").value = "";
+});
+
+const form = document.getElementById("orderForm");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("pnumber").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const food = document.getElementById("fitem").value.trim();
+  const quantity = parseInt(document.getElementById("qnumber").value);
+
+  if(name === "" || phone === "" || email === "" || food === "" || quantity === ""){
+    alert("⚠ Please fill all the fields!");
+    return;
+  }
+
+  alert("🎉 Your Order has been Submitted Successfully!");
+
+  form.reset();
+});
+
+</script>
 </body>
 </html>
