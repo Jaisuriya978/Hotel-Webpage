@@ -23,6 +23,7 @@ body{
 .main-header{
   text-align:center;
   padding:20px;
+  
 }
 
 .hero h1 {
@@ -97,26 +98,61 @@ table{
 }
 
 /* Media Query for Tablet */
-@media screen and (min-width:480px) and (max-width:768px){
+@media screen and (max-width: 480px) {
 
-  body{
-    background-color:#333;
+  .main-header {
+    flex-direction: column;
+    text-align: center;
   }
 
-  img{
-    width:100%;
-    height:auto;
+  .navbar {
+    display: flex;
+    flex-direction: column;
   }
 
-  iframe{
-    width:100%;
-    height:auto;
+  .navbar a {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
   }
 
-  table{
-    width:100%;
+  h1 {
+    font-size: 22px;
   }
 
+  .founder-img {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .gallery-marquee {
+    width: 90%;
+  }
+
+  pre {
+    font-size: 12px;
+    white-space: pre-wrap;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
     
   </style>
